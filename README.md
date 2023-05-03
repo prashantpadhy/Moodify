@@ -18,3 +18,10 @@ Creating a project that is effective for the modern generation. Working in uniso
 We learnt about the transfer learning approach for the model, which assisted us in face identification, as well as how to develop basic web pages using HTML, CSS and how to deploy the model on the web using flask.
 ## What's next for **Moodify**
 The next step is to improve the model's accuracy. We are also going to introduce an AI-based chat bot with which users may express their problems and, based on the same, the Bot will recommend some remedies as well as the most suitable movie or song in that case.
+## Output
+![image](https://user-images.githubusercontent.com/91092287/235847314-51a03ab0-8306-4e47-a03c-6ebb1ca50123.png)
+![image](https://user-images.githubusercontent.com/91092287/235847919-0592cd3c-c7d1-40ab-9f0a-68caa074876a.png)
+![image](https://user-images.githubusercontent.com/91092287/235847933-b6a8d10f-8cfd-4ff3-ac6c-e3ab9c07175b.png)
+![image](https://user-images.githubusercontent.com/91092287/235847952-354d284f-dec2-4a6a-909f-73b28bfb5955.png)
+
+
