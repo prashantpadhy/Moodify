@@ -1,4 +1,5 @@
 from __future__ import division, print_function
+import random
 #import sys
 import os
 import cv2
@@ -13,6 +14,21 @@ import statistics as st
 
 
 app = Flask(__name__)
+
+songs = [
+        {'url': 'https://open.spotify.com/track/3qWfqpB8KJFxwvbpqbuLCh?autoplay=true', 'img': '../static/Happy_Songs/bg1.png'},
+        {'url': 'https://open.spotify.com/track/02MWAaffLxlfxAUY7c5dvx?autoplay=true', 'img': '../static/Happy_Songs/bg2.png'},
+        {'url': 'https://open.spotify.com/track/6yvxu91deFKt3X1QoV6qMv?autoplay=true', 'img': '../static/Happy_Songs/bg14.png'},
+        {'url': 'https://open.spotify.com/track/6hsUgWbeuThQPK6CIJt9e5?autoplay=true', 'img': '../static/Happy_Songs/bg3.png'},
+        {'url': 'https://open.spotify.com/track/7yZcC4JIdQkXKaigJxrKSn?autoplay=true', 'img': '../static/Happy_Songs/bg5.png'},
+        {'url': 'https://open.spotify.com/track/0dLbrlAVPPjpPqnYfmJsWk?autoplay=true', 'img': '../static/Happy_Songs/bg7.png'},
+        {'url': 'https://open.spotify.com/track/17opN752ZQpNuoptelsNQ1?autoplay=true', 'img': '../static/Happy_Songs/bg8.png'},
+        {'url': 'https://open.spotify.com/track/7eQl3Yqv35ioqUfveKHitE?autoplay=true', 'img': '../static/Happy_Songs/bg9.png'},
+        {'url': 'https://open.spotify.com/track/2HZLXBOnaSRhXStMLrq9fD?autoplay=true', 'img': '../static/Happy_Songs/bg15.png'},
+        {'url': 'https://open.spotify.com/track/6VBhH7CyP56BXjp8VsDFPZ?autoplay=true', 'img': '../static/Happy_Songs/bg11.png'},
+        {'url': 'https://open.spotify.com/track/4fouWK6XVHhzl78KzQ1UjL?autoplay=true', 'img': '../static/Happy_Songs/bg12.png'},
+        {'url': 'https://open.spotify.com/track/2AxuA0uGFuizelViYhaHgh?autoplay=true', 'img': '../static/Happy_Songs/bg13.png'}
+    ]
 
 @app.route("/")
 def home():
@@ -116,7 +132,9 @@ def songsDisgust():
 
 @app.route('/songs/happy', methods = ['GET', 'POST'])
 def songsHappy():
-    return render_template("songsHappy.html")
+    random.shuffle(songs)
+    return render_template('songsHappy.html', songs=songs)
+    
 
 @app.route('/songs/fear', methods = ['GET', 'POST'])
 def songsFear():
